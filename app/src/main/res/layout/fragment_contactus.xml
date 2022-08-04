@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ContactusFragment"
+    android:padding="15sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:lottie_rawRes="@raw/contact_cover"
+            app:lottie_autoPlay="true"
+            app:lottie_repeatMode="restart"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="Let's talk"
+            android:textColor="@color/primaryDark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="fill"
+            android:text="@string/contact_text"
+            android:textColor="@color/secondaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:inputType="textEmailAddress"
+                android:text="Someone"
+                android:drawableStart="@drawable/name"
+                android:drawablePadding="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:inputType="textEmailAddress"
+                android:text="someone@gmail.com"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:lines="3"
+                android:gravity="top|left"
+                android:text="Type something here"
+                android:scrollbarStyle="insideInset"
+                android:drawableStart="@drawable/message"
+                android:drawablePadding="8dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Send Message"
+            android:backgroundTint="@color/primaryDark"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:background="@color/primaryDark"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" or you can "
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/primaryDark"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:background="@color/primaryDark"
+                android:layout_marginEnd="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call on "
+                android:textSize="17sp"
+                android:textColor="@color/secondaryDark"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/ownerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91-9049927365"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryDark"
+                android:fontFamily="@font/poppins"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mail on "
+                android:textSize="17sp"
+                android:textColor="@color/secondaryDark"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/ownerEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="satyamtiwari442@gmail.com"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryDark"
+                android:fontFamily="@font/poppins"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

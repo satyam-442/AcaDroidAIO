@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AcaDroid AIO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string name="forgot_one">Enter your registered email address we will get back to you with the reset password link</string>
+    <string name="forgot_two">Check your mail-box reset link have been sent successfully. Click it and get your new password instantly.</string>
+    <string name="personal_details"><u>Personal Details:</u></string>
+    <string name="academic_details"><u>Academic Details:</u></string>
+    <string name="guardian_details"><u>Guardian Details:</u></string>
+    <string name="contact_text">To request a quote or want to meet up for coffee, contact us directly or fill out the form and we will get back to you promptly.</string>
+
+    <string-array name="class_array">
+        <item>BFA</item>
+        <item>BCOM</item>
+        <item>BFM</item>
+        <item>BSCIT</item>
+        <item>BSC</item>
+        <item>BBI</item>
+    </string-array>
+
+    <string-array name="grade_array">
+        <item>ONE</item>
+        <item>TWO</item>
+        <item>THREE</item>
+        <item>FOUR</item>
+        <item>FIVE</item>
+        <item>SIX</item>
+    </string-array>
+</resources>

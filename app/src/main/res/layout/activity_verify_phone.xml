@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyPhoneActivity"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CO\nDE"
+            android:gravity="center"
+            android:textSize="80sp"
+            android:textColor="@color/primaryDark"
+            android:textStyle="bold"
+            android:lineSpacingExtra="-40dp"
+            android:fontFamily="@font/baloo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VERIFY PHONE NO"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/primaryDark"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter code manually if not detected Automatically"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/primaryDark"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/otpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OTP sent to "
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/primaryDark"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter OTP:"
+            android:textColor="@color/primaryDark"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="35dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tenantOTPLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="6"
+            android:layout_marginTop="10dp"
+            app:boxStrokeErrorColor="@android:color/holo_red_dark"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click to re-generate OTP"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/primaryDark"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"/>
+
+        <Button
+            android:id="@+id/verifyOTPBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/poppins"
+            android:letterSpacing="0.3"
+            android:text="VERIFY OTP"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primaryDark"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center|bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:padding="5dp"
+            android:text="Copyright &#169; SBM Solutions, Inc"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>
