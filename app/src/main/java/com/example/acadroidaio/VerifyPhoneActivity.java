@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 public class VerifyPhoneActivity extends AppCompatActivity {
 
     Button verifyOTPBtn;
-    String fname, mname, lname, classText, gradeText, email, password, phone,phoneGaurd , otpID, gender;
+    String fname, mname, lname, section, gradeText, email, password, phone,phoneGaurd , otpID, gender;
     TextView otpText;
     TextInputLayout tenantOTPLay;
     FirebaseAuth mAuth;
@@ -50,7 +50,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         password = getIntent().getStringExtra("password");
         phone = getIntent().getStringExtra("phone");
         phoneGaurd = getIntent().getStringExtra("phoneGaurd");
-        classText = getIntent().getStringExtra("class");
+        section = getIntent().getStringExtra("section");
         gradeText = getIntent().getStringExtra("sem");
         gender = getIntent().getStringExtra("gender");
 
@@ -136,8 +136,8 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     userMap.put("uid", userID);
                     userMap.put("image", "default");
                     userMap.put("MName", mname);
-                    userMap.put("class", classText);
-                    userMap.put("semester", gradeText);
+                    userMap.put("Section", section);
+                    userMap.put("Semester", gradeText);
                     userMap.put("Gender", gender);
                     userMap.put("About", "Hello There, I'm apprentice. I'm using this app to grow my knowledge and master the skills.");
                     db.collection("Students").document(userID).set(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {

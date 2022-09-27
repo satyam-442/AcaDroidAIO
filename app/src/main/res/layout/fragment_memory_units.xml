@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MemoryUnitsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas_neue"
+            android:gravity="center_horizontal"
+            android:text="Computer Memory\nUnits"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:paddingTop="8sp"
+            android:text="Memory unit is the amount of data that can be stored in the storage unit. This storage capacity is expressed in terms of Bytes."
+            android:textColor="@color/primaryDark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:text="Let's discuss some of the unit terminologies:"
+            android:textColor="@color/primaryDark"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Bit (Binary Digit)"
+                android:textColor="@color/primaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:justificationMode="inter_word"
+                android:text="A binary digit is logical 0 and 1 representing a passive or an active state of a component in an electric circuit."
+                android:textColor="@color/primaryDark"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Nibble"
+                android:textColor="@color/primaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:justificationMode="inter_word"
+                android:text="A group of 4 bits is called nibble."
+                android:textColor="@color/primaryDark"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Byte"
+                android:textColor="@color/primaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:justificationMode="inter_word"
+                android:text="A group of 8 bits is called byte. A byte is the smallest unit, which can represent a data item or a character."
+                android:textColor="@color/primaryDark"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Word"
+                android:textColor="@color/primaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:justificationMode="inter_word"
+                android:text="A computer word, like a byte, is a group of fixed number of bits processed as a unit, which varies from computer to computer but is fixed for each computer. The length of a computer word is called word-size or word length. It may be as small as 8 bits or may be as long as 96 bits. A computer stores the information in the form of computer words."
+                android:textColor="@color/primaryDark"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:text="The following table lists some higher storage units −"
+            android:textColor="@color/primaryDark"
+            android:textSize="17sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white">
+
+            <TableRow android:background="@color/mainColor">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Unit"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Description"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Kilobyte (KB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 KB = 1024 Bytes"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Megabyte (MB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 MB = 1024 KB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="GigaByte (GB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 GB = 1024 MB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="TeraByte (TB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 TB = 1024 GB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="PetaByte (PB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 PB = 1024 TB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Exabyte (EB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 EB = 1024 PB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Zettabyte (ZB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 ZB = 1024 EB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/mainColorLight">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="Yottabyte (YB)"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="8sp"
+                    android:text="1 YB = 1024 ZB"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="17sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

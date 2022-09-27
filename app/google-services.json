@@ -15,6 +15,43 @@
       },
       "oauth_client": [
         {
+          "client_id": "714360234697-h8u3gt5pmce2mjnhhlp79k18rn4i64ch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acadroidaio",
+            "certificate_hash": "9fca0be02e60e1a25f31523115d19a200945684f"
+          }
+        },
+        {
+          "client_id": "714360234697-sk5bpqvkj3omr2u9u2r9u7l80oa2bph4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCONvecz8INTOHrwWpVqkU6wPYdTmuVLZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714360234697-sk5bpqvkj3omr2u9u2r9u7l80oa2bph4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714360234697:android:cf62d85aec1a3b2ba42318",
+        "android_client_info": {
+          "package_name": "com.example.acadroidaioadmin"
+        }
+      },
+      "oauth_client": [
+        {
           "client_id": "714360234697-sk5bpqvkj3omr2u9u2r9u7l80oa2bph4.apps.googleusercontent.com",
           "client_type": 3
         }

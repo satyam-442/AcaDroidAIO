@@ -107,7 +107,7 @@ public class SingupFragment extends Fragment {
                     intent.putExtra("mname", mname);
                     intent.putExtra("phoneGaurd", phoneGuard);
                     intent.putExtra("gender", selectedGenderTxt.getText().toString());
-                    intent.putExtra("class", classText.getText().toString());
+                    intent.putExtra("section", classText.getText().toString());
                     intent.putExtra("sem", gradeText.getText().toString());
                     startActivity(intent);
                 }

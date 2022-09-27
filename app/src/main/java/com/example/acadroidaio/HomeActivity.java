@@ -102,11 +102,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navView.setCheckedItem(R.id.navHome);
         //setFactsMainFragment();
         if (null == savedInstanceState) {
-            /*getSupportFragmentManager().beginTransaction()
+            getSupportFragmentManager().beginTransaction()
                     .addToBackStack("fragmentA")
                     .replace(R.id.container, new HomeFragment(), "fragmentA")
-                    .commit();*/
-            setHomeFragment();
+                    .commit();
         }
 
         /*FirebaseMessaging.getInstance().getToken()

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="160dp"
-    android:layout_height="220dp">
+    android:layout_height="230dp">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="8dp"
-        app:cardElevation="5dp"
+        app:cardElevation="2dp"
         android:layout_margin="5dp">
 
         <LinearLayout
@@ -17,19 +17,43 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/syllabusImg"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:src="@android:drawable/presence_online"/>
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/syllabusImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/book_img"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/auth_bg_card"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:text="COURSE\nBOOK"
+                    android:gravity="center"
+                    android:fontFamily="@font/baloo"
+                    android:textSize="18sp"
+                    android:letterSpacing=".1"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/syllabusBookName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Digital Electronics"
+                android:text=""
                 android:gravity="center"
                 android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:layout_margin="5dp"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"

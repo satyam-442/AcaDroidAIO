@@ -2,7 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/baloo</item>
+        <item>@font/bebas_neue</item>
         <item>@font/poppins</item>
         <item>@font/roboto</item>
+        <item>@font/ubuntu</item>
     </array>
 </resources>
