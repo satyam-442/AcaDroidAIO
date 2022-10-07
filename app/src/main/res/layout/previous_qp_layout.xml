@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="160dp"
-    android:layout_height="wrap_content">
+    android:layout_height="230dp">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -25,18 +25,37 @@
                     android:id="@+id/syllabusImg"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:src="@drawable/book_img"
-                    android:scaleType="fitXY"/>
+                    android:src="@drawable/question_img"
+                    android:scaleType="centerCrop"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:src="@drawable/auth_bg_card"/>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:id="@+id/downloadQPImgBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_download_icon"
+                        app:tint="@color/secondaryDark"
+                        android:padding="12dp"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:text="COURSE\nBOOK"
+                    android:text="QUESTION\nPAPER"
                     android:gravity="center"
                     android:fontFamily="@font/baloo"
                     android:textSize="18sp"
@@ -46,10 +65,10 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/syllabusBookName"
+                android:id="@+id/questionPaperName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text=""
+                android:text="Imperative Programming"
                 android:gravity="center"
                 android:textSize="16sp"
                 android:ellipsize="end"

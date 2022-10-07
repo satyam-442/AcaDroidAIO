@@ -12,10 +12,10 @@ import com.example.acadroidaio.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BlogMainPage#newInstance} factory method to
+ * Use the {@link VideoMainPage#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlogMainPage extends Fragment {
+public class VideoMainPage extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class BlogMainPage extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BlogMainPage() {
+    public VideoMainPage() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class BlogMainPage extends Fragment {
      * @return A new instance of fragment BlogMainPage.
      */
     // TODO: Rename and change types and number of parameters
-    public static BlogMainPage newInstance(String param1, String param2) {
-        BlogMainPage fragment = new BlogMainPage();
+    public static VideoMainPage newInstance(String param1, String param2) {
+        VideoMainPage fragment = new VideoMainPage();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class BlogMainPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blog_main_page, container, false);
+        return inflater.inflate(R.layout.fragment_video_main_page, container, false);
     }
 }

@@ -12,12 +12,14 @@
     <string name="academic_details"><u>Academic Details:</u></string>
     <string name="guardian_details"><u>Guardian Details:</u></string>
     <string name="contact_text">To request a quote or want to meet up for coffee, contact us directly or fill out the form and we will get back to you promptly.</string>
-
+    <string name="logic_gate_intro">A logic gate is an idealized or physical device implementing a Boolean function, a logical operation performed on one or more binary inputs that produces a single binary output. Depending on the context, the term may refer to an ideal logic gate, one that has for instance zero rise time and unlimited fan-out, or it may refer to a non-ideal physical device. Logic gates are primarily implemented using diodes or transistors acting as electronic switches, but can also be constructed using vacuum tubes, electromagnetic relays (relay logic), fluidic logic, pneumatic logic, optics, molecules, or even mechanical elements. Now, most logic gates are made from MOSFETs (metal–oxide–semiconductor field-effect transistors).</string>
+    <string name="start_your_query_with">Start your query with \"What\" ,\"Why\" ,\"How\" ,etc.</string>
     <string-array name="class_array">
         <item>BFA</item>
         <item>BCOM</item>
         <item>BFM</item>
         <item>BSCIT</item>
+        <item>BSCCS</item>
         <item>BSC</item>
         <item>BBI</item>
     </string-array>

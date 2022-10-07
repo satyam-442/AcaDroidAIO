@@ -77,17 +77,23 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/forgotPwd"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="Forgot Password?"
-            android:textColor="@android:color/holo_red_light"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:fontFamily="@font/roboto"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/forgotPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Forgot Password?"
+                android:textColor="@android:color/holo_red_light"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto" />
+
+        </RelativeLayout>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -115,6 +121,18 @@
                 android:fontFamily="@font/roboto" />
 
         </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/goToStaffSigning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue as Staff"
+            android:layout_gravity="center"
+            android:textColor="@color/primaryDark"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"/>
 
         <LinearLayout
             android:layout_width="match_parent"

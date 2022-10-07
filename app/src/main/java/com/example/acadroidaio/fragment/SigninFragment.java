@@ -17,8 +17,10 @@ import android.widget.Toast;
 import com.example.acadroidaio.ForgotPassword;
 import com.example.acadroidaio.HomeActivity;
 import com.example.acadroidaio.R;
+import com.example.acadroidaio.staff.StaffLoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,7 +40,7 @@ import javax.mail.internet.MimeMessage;
 
 public class SigninFragment extends Fragment {
 
-    TextView signInBtn, forgotPwd;
+    TextView signInBtn, forgotPwd, goToStaffSigning;
     TextInputLayout emailSignIn, passwordSignIn;
     FirebaseAuth mAuth;
     ProgressDialog dialog;
@@ -52,6 +54,7 @@ public class SigninFragment extends Fragment {
 
         dialog = new ProgressDialog(getContext());
         //HOOKS FOR LOGIN
+
         emailSignIn = view.findViewById(R.id.emailSignIn);
         passwordSignIn = view.findViewById(R.id.passwordSignIn);
         forgotPwd = view.findViewById(R.id.forgotPwd);
@@ -59,6 +62,15 @@ public class SigninFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        goToStaffSigning = view.findViewById(R.id.goToStaffSigning);
+        goToStaffSigning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), StaffLoginActivity.class);
                 startActivity(intent);
             }
         });

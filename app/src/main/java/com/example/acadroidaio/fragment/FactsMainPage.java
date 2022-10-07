@@ -12,10 +12,12 @@ import android.widget.TextView;
 import com.example.acadroidaio.HomeActivity;
 import com.example.acadroidaio.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.card.MaterialCardView;
 
 public class FactsMainPage extends Fragment {
 
     TextView asciiCodesBtn, binaryCodesBtn, memoryUnitsBtn;
+    MaterialCardView asciiCodesCard, binaryCodesCard, memoryUnitsCard;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,12 +33,39 @@ public class FactsMainPage extends Fragment {
             }
         });
 
+        memoryUnitsCard = view.findViewById(R.id.memoryUnitsCard);
+        memoryUnitsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MemoryUnitsFragment unitsFragment = new MemoryUnitsFragment();
+                ((HomeActivity) getActivity()).replaceFragment(unitsFragment,"fragmentB");
+            }
+        });
+
         binaryCodesBtn = view.findViewById(R.id.binaryCodesBtn);
         binaryCodesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 BinaryCodesFragment binaryCodesFragment = new BinaryCodesFragment();
                 ((HomeActivity) requireActivity()).replaceFragment(binaryCodesFragment, "fragmentB");
+            }
+        });
+
+        binaryCodesCard = view.findViewById(R.id.binaryCodesCard);
+        binaryCodesCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BinaryCodesFragment binaryCodesFragment = new BinaryCodesFragment();
+                ((HomeActivity) requireActivity()).replaceFragment(binaryCodesFragment, "fragmentB");
+            }
+        });
+
+        asciiCodesCard = view.findViewById(R.id.asciiCodesCard);
+        asciiCodesCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AsciiCodeFragment asciiCodeFragment = new AsciiCodeFragment();
+                ((HomeActivity) requireActivity()).replaceFragment(asciiCodeFragment, "fragmentB");
             }
         });
 

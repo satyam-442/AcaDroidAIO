@@ -1,5 +1,14 @@
 package com.example.acadroidaio;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,27 +18,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.example.acadroidaio.fragment.AboutusFragment;
-import com.example.acadroidaio.fragment.BlogMainPage;
+import com.example.acadroidaio.fragment.VideoMainPage;
 import com.example.acadroidaio.fragment.ContactusFragment;
 import com.example.acadroidaio.fragment.FactsMainPage;
 import com.example.acadroidaio.fragment.HomeFragment;
 import com.example.acadroidaio.fragment.ProfileFragment;
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.example.acadroidaio.fragment.QueriesMainFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,7 +35,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "ERROR";
     DrawerLayout drawerLayout;
@@ -57,12 +55,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        dialog = new ProgressDialog(this);
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar = findViewById(R.id.toolbar);
-
-        dialog = new ProgressDialog(this);
-
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Home");
 
         usersRef = db.collection("Students").document(currentUserID);
@@ -76,15 +73,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         usersRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot snapshot) {
-                if (snapshot.exists()){
+                if (snapshot.exists()) {
                     String fname = snapshot.getString("FName");
                     String lname = snapshot.getString("LName");
                     String email = snapshot.getString("Email");
-                    navHeaderName.setText(fname+" "+lname);
+                    navHeaderName.setText(fname + " " + lname);
                     navHeaderEmail.setText(email);
 
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "Error Occurred!", Toast.LENGTH_SHORT).show();
                 }
                 dialog.dismiss();
@@ -93,7 +89,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         navView.bringToFront();
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -144,15 +140,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.navHome:
                 setHomeFragment();
+                break;
+            case R.id.navQuery:
+                setQueryMainFragment();
                 break;
             case R.id.navFacts:
                 setFactsMainFragment();
                 break;
-            case R.id.navBlog:
-                setBlogPageFragment();
+            case R.id.navVideos:
+                setVideoPageFragment();
                 break;
             case R.id.navProfile:
                 setProfilePageFragment();
@@ -173,44 +172,50 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void sendUserToLogin() {
-        Intent loginIntent = new Intent(getApplicationContext(),AuthActivity.class);
-        loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Intent loginIntent = new Intent(getApplicationContext(), AuthActivity.class);
+        loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(loginIntent);
         finish();
     }
 
-    void setHomeFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+    void setHomeFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         getSupportActionBar().setTitle("Home");
         setAnimation();
     }
 
-    void setFactsMainFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new FactsMainPage()).commit();
+    private void setQueryMainFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new QueriesMainFragment()).commit();
+        getSupportActionBar().setTitle("Query");
+        setAnimation();
+    }
+
+    void setFactsMainFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new FactsMainPage()).commit();
         getSupportActionBar().setTitle("Facts");
         setAnimation();
     }
 
-    void setBlogPageFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new BlogMainPage()).commit();
-        getSupportActionBar().setTitle("Blogs");
+    void setVideoPageFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new VideoMainPage()).commit();
+        getSupportActionBar().setTitle("Videos");
         setAnimation();
     }
 
-    void setProfilePageFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new ProfileFragment()).commit();
+    void setProfilePageFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
         getSupportActionBar().setTitle("Profile");
         setAnimation();
     }
 
-    void setContactFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new ContactusFragment()).commit();
+    void setContactFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new ContactusFragment()).commit();
         getSupportActionBar().setTitle("Contact Us");
         setAnimation();
     }
 
-    void setAboutFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new AboutusFragment()).commit();
+    void setAboutFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new AboutusFragment()).commit();
         getSupportActionBar().setTitle("About Us");
         setAnimation();
     }
@@ -245,7 +250,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onBackPressed() {
         int fragmentsInStack = getSupportFragmentManager().getBackStackEntryCount();
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else if (fragmentsInStack > 1) {
             // If we have more than one fragment, pop back stack
@@ -259,11 +264,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public void setDrawer_Locked(){
+    public void setDrawer_Locked() {
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
     }
 
-    public void setDrawer_UnLocked(){
+    public void setDrawer_UnLocked() {
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
     }
 }

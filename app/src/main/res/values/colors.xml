@@ -3,6 +3,7 @@
     <color name="mainColorLight">#F8F8F8</color>
     <color name="primaryLight">#F8F8F8</color>
     <color name="primaryColor">#D6BEBA</color>
+    <color name="currentColor">#D6BEBA</color>
     <color name="primaryDark">#1C2E3E</color>
     <color name="mainColor">#1C2E3E</color>
     <color name="secondaryLight">#B5E0EA</color>

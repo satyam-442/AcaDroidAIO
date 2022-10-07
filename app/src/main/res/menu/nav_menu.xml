@@ -7,14 +7,19 @@
             android:icon="@drawable/home_menu"/>
 
         <item
+            android:id="@+id/navQuery"
+            android:title="Queries"
+            android:icon="@drawable/query_menu"/>
+
+        <item
             android:id="@+id/navFacts"
             android:title="Facts"
             android:icon="@drawable/fact_menu"/>
 
         <item
-            android:id="@+id/navBlog"
-            android:title="Blogs"
-            android:icon="@drawable/blog_menu"/>
+            android:id="@+id/navVideos"
+            android:title="Videos"
+            android:icon="@drawable/video_menu"/>
 
         <item
             android:id="@+id/navProfile"
